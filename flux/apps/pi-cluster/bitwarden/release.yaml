@@ -24,3 +24,6 @@ spec:
     ingress:
       enabled: true
       host: bitwarden.fener.net
+    service:
+      type: LoadBalancer
+      httpPort: 3000
