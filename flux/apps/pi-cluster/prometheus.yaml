@@ -24,3 +24,9 @@ spec:
         enabled: true
         hosts:
         - prometheus.fener.net
+      persistence:
+        storageClass: nfs-client
+    alertmanager:
+      persistence:
+        storageClass: nfs-client
+    
