@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - namespaces
   - sources
+  - storage-classes
