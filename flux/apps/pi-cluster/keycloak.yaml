@@ -9,7 +9,7 @@ spec:
       chart: keycloak
       sourceRef:
         kind: HelmRepository
-        name: bitnami
+        name: codecentric
       version: 3.0.3
   interval: 1m0s
   install:
