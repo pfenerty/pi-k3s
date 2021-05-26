@@ -22,8 +22,8 @@ spec:
     global:
       storageClass: nfs-client
     image:
-      repository: alemairebe/keycloak
-      tag: 13.0.0
+      repository: openremote/keycloak
+      tag: 12.0.1.1
     postgresql:
       enabled: true
       image:
