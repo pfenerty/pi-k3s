@@ -5,4 +5,5 @@ resources:
   - gissilabs.yaml
   - nfs-subdir-external-provisioner.yaml
   - bitnami.yaml
-  - authelia.yaml
+  # - authelia.yaml
+  - codecentric.yaml
