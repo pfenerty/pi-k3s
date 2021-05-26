@@ -19,3 +19,12 @@ spec:
     remediation:
       retries: 3
   values:
+    domain: fener.net
+    ingress:
+      enabled: true
+      subdomain: auth
+      tls:
+        enabled: false
+    persistence:
+      enabled: true
+      storageClass: nfs-client
