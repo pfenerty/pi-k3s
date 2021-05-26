@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - prometheus.yaml
   - bitwarden.yaml
-  - keycloak.yaml
+  # - keycloak.yaml
