@@ -24,20 +24,17 @@ spec:
     image:
       repository: alemairebe/keycloak
       tag: 12.0.4
-
     postgresql:
       enabled: true
       image:
         repository: postgres
-        tag: 9.6
-
+        tag: 11.12
     ingress:
       enabled: true
       rules:
       - host: keycloak.fener.net
         paths:
         - /
-
     extraEnv: |
       - name: KEYCLOAK_USER
         value: admin
