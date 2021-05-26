@@ -1,0 +1,36 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: keycloak
+  namespace: flux-user
+spec:
+  chart:
+    spec:
+      chart: keycloak
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+      version: 3.0.3
+  interval: 1m0s
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    clusterDomain: fener.net
+    image:
+      registry: alemairebe/keycloak
+      tag: 13.0.0
+    service:
+      type: ClusterIP
+    ingress:
+      enabled: true
+      hostname: keycloak.fener.net
+    metrics:
+      enabled: true
+    postgresql:
+      image:
+        repository: postgres
+        tag: 11.12
