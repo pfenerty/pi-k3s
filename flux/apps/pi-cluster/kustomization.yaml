@@ -4,3 +4,4 @@ resources:
   - prometheus.yaml
   - bitwarden.yaml
   # - keycloak.yaml
+  - authelia.yaml
