@@ -21,7 +21,7 @@ spec:
   values:
     clusterDomain: fener.net
     image:
-      registry: alemairebe/keycloak
+      repository: alemairebe/keycloak
       tag: 13.0.0
     service:
       type: ClusterIP
@@ -34,3 +34,6 @@ spec:
       image:
         repository: postgres
         tag: 11.12
+      persistence:
+        storageClass: nfs-client
+      
