@@ -18,17 +18,20 @@ spec:
   upgrade:
     remediation:
       retries: 3
-  valuesFrom:
+  values:
     - kind: Secret
       name: linkerd-certs
+      namespace: flux-user
       valuesKey: ca.crt
       targetPath: global.identityTrustAnchorsPEM
     - kind: Secret
       name: linkerd-certs
+      namespace: flux-user
       valuesKey: issuer.crt
       targetPath: identity.issuer.tls.crtPEM
     - kind: Secret
       name: linkerd-certs
+      namespace: flux-user
       valuesKey: issuer.key
       targetPath: identity.issuer.tls.keyPEM
   values:
