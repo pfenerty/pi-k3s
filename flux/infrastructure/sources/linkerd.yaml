@@ -2,8 +2,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: authelia
+  name: linkerd
   namespace: flux-user
 spec:
   interval: 1m0s
-  url: https://charts.authelia.com
+  url: https://helm.linkerd.io/stable

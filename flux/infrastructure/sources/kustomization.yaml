@@ -4,6 +4,4 @@ resources:
   - prometheus.yaml
   - gissilabs.yaml
   - nfs-subdir-external-provisioner.yaml
-  - bitnami.yaml
-  # - authelia.yaml
-  - codecentric.yaml
+  - linkerd.yaml
