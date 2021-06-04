@@ -4,4 +4,4 @@ resources:
   - namespaces
   - sources
   - storage-classes
-  # - service-mesh
+  - service-mesh
