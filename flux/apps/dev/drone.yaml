@@ -6,11 +6,11 @@ metadata:
 spec:
   chart:
     spec:
-      chart: gitea
+      chart: drone
       sourceRef:
         kind: HelmRepository
-        name: gitea
-      version: 3.0.0
+        name: drone
+      version: 0.1.7
   interval: 1m0s
   install:
     remediation:
