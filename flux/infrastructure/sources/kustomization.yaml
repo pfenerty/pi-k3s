@@ -5,3 +5,4 @@ resources:
   - gissilabs.yaml
   - nfs-subdir-external-provisioner.yaml
   - gitea.yaml
+  - drone.yaml

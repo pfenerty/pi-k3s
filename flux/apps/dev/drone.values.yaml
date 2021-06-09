@@ -1,14 +1,35 @@
-ingress:
-  enabled: true
-  hosts:
-    - host: drone.fener.net
-      paths:
-        - "/"
-persistentVolume:
-  storageClass: nfs-client
-env:
-  DRONE_SERVER_HOST: drone.fener.net
-  DRONE_RPC_SECRET: 9gcMePY7@hzsnJ
-  DRONE_GITEA_CLIENT_ID: 576153af-eb38-4acd-9198-a8b9d5c704e6
-  DRONE_GITEA_CLIENT_SECRET: duJd-024UPK_o71sc6XlJ9aUtlla2I84qjQ_OfCKLpY=
-  DRONE_GITEA_SERVER: http://gitea.fener.net
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: gitea
+  namespace: flux-user
+spec:
+  chart:
+    spec:
+      chart: gitea
+      sourceRef:
+        kind: HelmRepository
+        name: gitea
+      version: 3.0.0
+  interval: 1m0s
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    ingress:
+      enabled: true
+      hosts:
+        - host: drone.fener.net
+          paths:
+            - "/"
+    persistentVolume:
+      storageClass: nfs-client
+    env:
+      DRONE_SERVER_HOST: drone.fener.net
+      DRONE_RPC_SECRET: 9gcMePY7@hzsnJ
+      DRONE_GITEA_CLIENT_ID: 576153af-eb38-4acd-9198-a8b9d5c704e6
+      DRONE_GITEA_CLIENT_SECRET: duJd-024UPK_o71sc6XlJ9aUtlla2I84qjQ_OfCKLpY=
+      DRONE_GITEA_SERVER: http://gitea.fener.net
