@@ -1,0 +1,14 @@
+ingress:
+  enabled: true
+  hosts:
+    - host: drone.fener.net
+      paths:
+        - "/"
+persistentVolume:
+  storageClass: nfs-client
+env:
+  DRONE_SERVER_HOST: drone.fener.net
+  DRONE_RPC_SECRET: 9gcMePY7@hzsnJ
+  DRONE_GITEA_CLIENT_ID: 576153af-eb38-4acd-9198-a8b9d5c704e6
+  DRONE_GITEA_CLIENT_SECRET: duJd-024UPK_o71sc6XlJ9aUtlla2I84qjQ_OfCKLpY=
+  DRONE_GITEA_SERVER: http://gitea.fener.net
