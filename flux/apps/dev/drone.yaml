@@ -30,6 +30,6 @@ spec:
     env:
       DRONE_SERVER_HOST: drone.fener.net
       DRONE_RPC_SECRET: 9gcMePY7@hzsnJ
-      DRONE_GITEA_CLIENT_ID: 576153af-eb38-4acd-9198-a8b9d5c704e6
-      DRONE_GITEA_CLIENT_SECRET: duJd-024UPK_o71sc6XlJ9aUtlla2I84qjQ_OfCKLpY=
+      DRONE_GITEA_CLIENT_ID: c64c8211-b3f1-4628-886d-d6e870366bc6
+      DRONE_GITEA_CLIENT_SECRET: uoGmv3JUNNzLh1fjdDcosfpmRTmUKOMEJ3-UOnXM54o=
       DRONE_GITEA_SERVER: http://gitea.fener.net
