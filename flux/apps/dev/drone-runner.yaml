@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: drone-runner
+  namespace: flux-user
+spec:
+  chart:
+    spec:
+      chart: drone-runner-kube
+      sourceRef:
+        kind: HelmRepository
+        name: drone
+      version: 0.1.5
+  interval: 1m0s
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    rbac:
+      buildNamespaces:
+        - flux-user
+    env:
+      DRONE_RPC_SECRET: 9gcMePY7@hzsnJ
+      DRONE_NAMESPACE_DEFAULT: flux-user

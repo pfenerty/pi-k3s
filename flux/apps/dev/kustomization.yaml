@@ -3,3 +3,4 @@ kind: Kustomization
 resources: 
   - gitea.yaml
   - drone.yaml
+  - drone-runner.yaml
