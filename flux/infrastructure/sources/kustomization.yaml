@@ -7,4 +7,4 @@ resources:
   - gitea.yaml
   - drone.yaml
   - twuni.yaml
-  - chatmuseum.yaml
+  - chartmuseum.yaml
