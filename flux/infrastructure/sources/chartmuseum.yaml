@@ -1,0 +1,9 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: chartmuseum
+  namespace: flux-user
+spec:
+  interval: 1m0s
+  url: https://chartmuseum.github.io/charts

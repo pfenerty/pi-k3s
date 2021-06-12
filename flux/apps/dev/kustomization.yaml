@@ -6,3 +6,4 @@ resources:
   - drone-runner.yaml
   - registry.yaml
   - registry-proxy.yaml
+  - chartmuseum.yaml
