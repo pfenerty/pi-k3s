@@ -6,3 +6,4 @@ resources:
   - nfs-subdir-external-provisioner.yaml
   - gitea.yaml
   - drone.yaml
+  - twuni.yaml

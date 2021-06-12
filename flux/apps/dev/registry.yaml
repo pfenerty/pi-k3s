@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: registry
+  namespace: flux-user
+spec:
+  chart:
+    spec:
+      chart: docker-registry
+      sourceRef:
+        kind: HelmRepository
+        name: twuni
+      version: 1.11.0
+  interval: 1m0s
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    persistence:
+      enabled: true
+      storageClass: nfs-client
+    ingress:
+      enabled: true
+      hosts:
+        - registry.fener.net

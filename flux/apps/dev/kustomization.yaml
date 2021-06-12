@@ -4,3 +4,4 @@ resources:
   - gitea.yaml
   - drone.yaml
   - drone-runner.yaml
+  - registry.yaml
