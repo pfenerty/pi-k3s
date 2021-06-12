@@ -29,3 +29,12 @@ spec:
       enabled: true
       hosts:
         - proxy.registry.fener.net
+  valuesFrom:
+  - kind: Secret
+    name: docker-hub-creds
+    valuesKey: username
+    targetPath: proxy.username
+  - kind: Secret
+    name: docker-hub-creds
+    valuesKey: password
+    targetPath: proxy.password 

@@ -5,4 +5,4 @@ resources:
   - drone.yaml
   - drone-runner.yaml
   - registry.yaml
-  # - registry-proxy.yaml
+  - registry-proxy.yaml
