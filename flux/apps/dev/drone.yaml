@@ -33,3 +33,16 @@ spec:
       DRONE_GITEA_CLIENT_ID: c64c8211-b3f1-4628-886d-d6e870366bc6
       DRONE_GITEA_CLIENT_SECRET: uoGmv3JUNNzLh1fjdDcosfpmRTmUKOMEJ3-UOnXM54o=
       DRONE_GITEA_SERVER: http://gitea.fener.net
+  valuesFrom:
+    - kind: Secret
+      name: drone-gitea
+      valuesKey: rpc_secret
+      targetPath: env.DRONE_RPC_SECRET
+    - kind: Secret
+      name: drone-gitea
+      valuesKey: client_id
+      targetPath: env.DRONE_GITEA_CLIENT_ID
+    - kind: Secret
+      name: drone-gitea
+      valuesKey: client_secret
+      targetPath: env.DRONE_GITEA_CLIENT_SECRET
