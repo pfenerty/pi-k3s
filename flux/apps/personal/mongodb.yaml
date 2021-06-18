@@ -28,5 +28,5 @@ spec:
       storageClass: nfs-client
       mountPath: /data/db
     service:
-      type: NodePort
+      type: LoadBalancer
       nodePort: 27017
