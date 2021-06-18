@@ -8,3 +8,4 @@ resources:
   - drone.yaml
   - twuni.yaml
   - chartmuseum.yaml
+  - bitnami.yaml

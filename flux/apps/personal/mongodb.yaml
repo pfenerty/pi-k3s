@@ -1,0 +1,32 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: mongodb
+  namespace: flux-user
+spec:
+  chart:
+    spec:
+      chart: mongodb
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+      version: 10.16.4
+  interval: 1m0s
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    image:
+      repository: mongo
+      tag: 4.4.6
+    auth:
+      enabled: false
+    persistence:
+      storageClass: nfs-client
+      mountPath: /data/db
+    service:
+      type: NodePort
+      nodePort: 27017
