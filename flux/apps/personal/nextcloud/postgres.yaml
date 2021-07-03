@@ -31,4 +31,5 @@ spec:
       storageClass: nfs-client
     postgresqlDataDir: /var/lib/postgresql/data/pgdata
     postgresqlUsername: nextcloud
+    postgresqlDatabase: nextcloud
     existingSecret: nextcloud-db-secret
