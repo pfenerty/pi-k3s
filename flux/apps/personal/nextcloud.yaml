@@ -23,19 +23,6 @@ spec:
       enabled: true
     nextcloud:
       host: nextcloud.fener.net
-    internalDatabase:
-      enabled: false
-    externalDatabase:
-      enabled: true
-      type: postgresql
-      host: nextcloud-postgres-postgresql
-      user: nextcloud
-      database: nextcloud
-      existingSecret:
-        enabled: true
-        secretName: nextcloud-db-secret
-        passwordKey: postgresql-password
-        usernameKey: user
     presistence:
       enabled: true
       storageClass: nfs-client
