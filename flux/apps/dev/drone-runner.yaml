@@ -23,5 +23,9 @@ spec:
       buildNamespaces:
         - flux-user
     env:
-      DRONE_RPC_SECRET: 9gcMePY7@hzsnJ
       DRONE_NAMESPACE_DEFAULT: flux-user
+  valuesFrom:
+    - kind: Secret
+      name: drone-gitea
+      valuesKey: rpc_secret
+      targetPath: env.DRONE_RPC_SECRET
