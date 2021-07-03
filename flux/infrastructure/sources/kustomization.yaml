@@ -9,3 +9,4 @@ resources:
   - twuni.yaml
   - chartmuseum.yaml
   - bitnami.yaml
+  - nextcloud.yaml
