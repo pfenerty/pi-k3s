@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: gitea
-      version: 3.0.0
+      version: 4.0.3
   interval: 1m0s
   install:
     remediation:
@@ -22,7 +22,10 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - gitea.fener.net
+      - host: gitea.fener.net
+        paths:
+          - path: /
+            pathType: Prefix
     persistence:
       storageClass: nfs-client
     memcached:
