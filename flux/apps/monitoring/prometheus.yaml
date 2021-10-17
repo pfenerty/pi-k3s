@@ -20,10 +20,10 @@ spec:
       retries: 3
   values:
     server:
-      ingress:
-        enabled: true
-        hosts:
-        - prometheus.fener.net
+      # ingress:
+      #   enabled: true
+      #   hosts:
+      #   - prometheus.fener.net
       persistentVolume:
         storageClass: nfs-client
     alertmanager:

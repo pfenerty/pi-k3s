@@ -21,13 +21,13 @@ spec:
   values:
     image:
       tag: 1.15.0
-    ingress:
-      enabled: true
-      hosts:
-      - host: gitea.fener.net
-        paths:
-          - path: /
-            pathType: Prefix
+    # ingress:
+    #   enabled: true
+    #   hosts:
+    #   - host: gitea.fener.net
+    #     paths:
+    #       - path: /
+    #         pathType: Prefix
     persistence:
       storageClass: nfs-client
     memcached:

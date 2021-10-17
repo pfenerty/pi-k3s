@@ -22,9 +22,9 @@ spec:
     persistence:
       enabled: true
       storageClass: nfs-client
-    ingress:
-      enabled: true
-      hosts:
-        - name: chartmuseum.fener.net
-          path: /
-          tls: false
+    # ingress:
+    #   enabled: true
+    #   hosts:
+    #     - name: chartmuseum.fener.net
+    #       path: /
+    #       tls: false

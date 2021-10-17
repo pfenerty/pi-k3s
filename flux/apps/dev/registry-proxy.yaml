@@ -25,10 +25,10 @@ spec:
     proxy:
       enabled: true
       remoteurl: https://registry-1.docker.io
-    ingress:
-      enabled: true
-      hosts:
-        - proxy.registry.fener.net
+    # ingress:
+    #   enabled: true
+    #   hosts:
+    #     - proxy.registry.fener.net
   valuesFrom:
   - kind: Secret
     name: docker-hub-creds

@@ -19,10 +19,10 @@ spec:
     remediation:
       retries: 3
   values:
-    ingress:
-      enabled: true
-    nextcloud:
-      host: nextcloud.fener.net
+    # ingress:
+    #   enabled: true
+    # nextcloud:
+    #   host: nextcloud.fener.net
     presistence:
       enabled: true
       storageClass: nfs-client

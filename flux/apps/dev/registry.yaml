@@ -22,7 +22,7 @@ spec:
     persistence:
       enabled: true
       storageClass: nfs-client
-    ingress:
-      enabled: true
-      hosts:
-        - registry.fener.net
+    # ingress:
+    #   enabled: true
+    #   hosts:
+    #     - registry.fener.net
