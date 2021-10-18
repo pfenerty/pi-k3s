@@ -26,9 +26,23 @@ spec:
       #   - prometheus.fener.net
       persistentVolume:
         storageClass: nfs-client
+      service:
+        annotations: 
+          linkerd.io/inject: enabled
     alertmanager:
       persistentVolume:
         storageClass: nfs-client
       service:
-        annotations: "linkerd.io/inject: enabled"
+        annotations: 
+          linkerd.io/inject: enabled
+    nodeExporter:
+      service:
+        annotations: 
+          linkerd.io/inject: enabled
+    pushgateway:
+      service:
+        annotations: 
+          prometheus.io/probe: pushgateway
+          linkerd.io/inject: enabled
+    
     
