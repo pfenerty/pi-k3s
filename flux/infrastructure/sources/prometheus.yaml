@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: prometheus
+  name: linkered-viz
   annotations:
     linkerd.io/inject: enabled
 ---
