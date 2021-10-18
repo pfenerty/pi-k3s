@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: prometheus
-  labels:
+  annotations:
     linkerd.io/inject: enabled
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
