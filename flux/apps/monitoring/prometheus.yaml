@@ -50,8 +50,8 @@ extraScrapeConfigs:
     - role: pod
       namespaces:
         names:
-        - '{{.Values.linkerdNamespace}}'
-        - '{{.Values.namespace}}'
+        - 'linkerd'
+        - 'linkerd-viz'
     relabel_configs:
     - source_labels:
       - __meta_kubernetes_pod_container_port_name
