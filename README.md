@@ -37,5 +37,5 @@ kubectl apply -f flux/apps/dev/secrets/drone-gitea.secret.yaml
 5. run flux
 
 ```
-flux bootstrap git --url=ssh://git@github.com:pfenerty/pi-k3s.git --private-key-file=~/.ssh/id_rsa --path=flux
+flux bootstrap git --url=ssh://git@github.com/pfenerty/pi-k3s.git --path=flux/clusters/pi-cluster --private-key-file=<relative_path>
 ```
