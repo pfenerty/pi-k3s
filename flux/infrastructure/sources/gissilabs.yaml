@@ -1,9 +1,13 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bitwarden
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: gissilabs
-  namespace: flux-user
+  namespace: bitwarden
 spec:
   interval: 1m0s
   url: https://gissilabs.github.io/charts/
